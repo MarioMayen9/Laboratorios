@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="weight_name">KG</string>
+    <string name="height_name">CM</string>
+    <string name="greeting_text">Tu resultado de IMB es:  %f , %s</string>
+    <string name="imb_text"> %s</string>
+
+    <string name="action_send">Send</string>
+</resources>
