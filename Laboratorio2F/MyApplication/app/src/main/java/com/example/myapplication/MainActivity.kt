@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         nDisplayTextView.text  = ""
         nSendButton.setOnClickListener{
 
+            var response =""
             val weight = nWeightEditText.text.toString()
 
             val height = nHeightEditText.text.toString()
@@ -35,19 +36,18 @@ class MainActivity : AppCompatActivity() {
             val result = weight.toFloat() / ((height.toFloat() / 100) * (height.toFloat() / 100))
 
             if(result < 18.5){
-                val response="underweight"
+                 response="underweight"
             }
             if(result > 18.5 && result < 24.99){
-            val response="Healthy"
+             response="Healthy"
         }
             if(result > 25 &&  result < 29.00){
-            val response="Overweight"
+             response="Overweight"
         }
             if(result > 30){
-                val imb="underweight"
+                response="obese"
             }
 
-            val response =""
             nDisplayTextView.text = getString(R.string.greeting_text,result, response)
 
 
