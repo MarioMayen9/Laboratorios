@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_title_size">25sp</dimen>
+    <dimen name="money_quantity_text_size">50sp</dimen>
+    <dimen name="default_image_width">155dp</dimen>
+    <dimen name="default_image_height">120dp</dimen>
+    <dimen name="default_gap">16dp</dimen>
+    <dimen name="default_image_space">60dp</dimen>
+    <dimen name="big_gap">28dp</dimen>
+    <dimen name="botton_gap">148dp</dimen>
+    <dimen name="text_size">14sp</dimen>
+</resources>

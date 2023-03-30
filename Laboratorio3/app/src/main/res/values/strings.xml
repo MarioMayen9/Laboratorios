@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Laboratorio3</string>
+    <string name="money_quantity">$0 </string>
+    <string name="money_quantity_text_view">Cantidad de dinero</string>
+    <string name="text_twenty_five_cent">$0.25</string>
+    <string name="text_one_dollar">$1</string>
+    <string name="text_five_cent">$0.05</string>
+    <string name="text_ten_cent">$0.10</string>
+</resources>
