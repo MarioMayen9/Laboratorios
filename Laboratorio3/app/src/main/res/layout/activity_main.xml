@@ -38,9 +38,9 @@
 
     <ImageView
         android:id="@+id/image_dollar"
-        tools:ignore="ContentDescription"
         android:layout_width="@dimen/default_image_width"
         android:layout_height="@dimen/default_image_height"
+        android:layout_marginStart="@dimen/default_gap"
         android:layout_marginTop="@dimen/default_gap"
         android:layout_marginEnd="@dimen/default_gap"
         android:layout_marginBottom="@dimen/botton_gap"
@@ -49,7 +49,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/image_tf_cent"
         app:layout_constraintTop_toBottomOf="@+id/text_ten_cent"
-        app:srcCompat="@drawable/one_dollar" />
+        app:srcCompat="@drawable/one_dollar"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/image_tf_cent"
