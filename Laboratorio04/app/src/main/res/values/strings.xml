@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Laboratorio04</string>
+    <string name="name_hint_text_view">Nombre</string>
+    <string name="email_hint_text_view">Correo electrónico</string>
+    <string name="phonenumber_hint_text_view">Número de teléfono</string>
+    <string name="save_text_action">Guardar</string>
+    <string name="text_view">Rellena la siguiente información</string>
+    <string name="second_activity_textview">Confirma tu información</string>
+</resources>
