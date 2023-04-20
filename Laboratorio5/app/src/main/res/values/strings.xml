@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Laboratorio5</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="billboard">Billboard</string>
+    <string name="new_movie_text">New Movie</string>
+    <string name="name_text_hint">Nombre</string>
+    <string name="cateogory_text_hint">Categoria</string>
+    <string name="description_text_hint">Description</string>
+    <string name="calificacion_text_hint">Calificacion</string>
+    <string name="submit_button_text">SUBMIT</string>
+    <string name="cience_fiction_text">Ciencia ficcion</string>
+</resources>
