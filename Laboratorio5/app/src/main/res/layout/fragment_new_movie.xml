@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/billboard_background"
-    tools:context=".NewMovieFragment" >
+    tools:context=".ui.movie.NewMovieFragment" >
 
     <TextView
         android:id="@+id/textView"
@@ -32,6 +32,7 @@
         android:minHeight="48dp"
         android:padding="@dimen/default_gap"
         android:textColorHint="@color/white"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -48,6 +49,7 @@
         android:minHeight="48dp"
         android:padding="@dimen/default_gap"
         android:textColorHint="@color/white"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
@@ -60,6 +62,7 @@
         android:layout_marginTop="@dimen/medium_gap"
         android:layout_marginEnd="@dimen/default_gap"
         android:background="@color/card_background"
+        android:textColor="@color/white"
         android:hint="@string/description_text_hint"
         android:minHeight="48dp"
         android:padding="@dimen/default_gap"
@@ -77,8 +80,10 @@
         android:layout_marginEnd="@dimen/default_gap"
         android:background="@color/card_background"
         android:hint="@string/calificacion_text_hint"
+        android:textColor="@color/white"
         android:minHeight="48dp"
         android:padding="@dimen/default_gap"
+        android:inputType="number"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
