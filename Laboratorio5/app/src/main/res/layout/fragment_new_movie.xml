@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/billboard_background"
     tools:context=".ui.movie.NewMovieFragment" >
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.laboratorio5.ui.movie.MovieViewModel" />
+    </data>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/billboard_background">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/billboard_background">
 
     <TextView
         android:id="@+id/textView"
@@ -28,6 +41,7 @@
         android:layout_marginTop="@dimen/big_gap"
         android:layout_marginEnd="@dimen/default_gap"
         android:background="@color/card_background"
+        android:text="@={viewmodel.name}"
         android:hint="@string/name_text_hint"
         android:minHeight="48dp"
         android:padding="@dimen/default_gap"
@@ -46,6 +60,7 @@
         android:layout_marginEnd="@dimen/default_gap"
         android:background="@color/card_background"
         android:hint="@string/cateogory_text_hint"
+        android:text="@={viewmodel.category}"
         android:minHeight="48dp"
         android:padding="@dimen/default_gap"
         android:textColorHint="@color/white"
@@ -64,6 +79,7 @@
         android:background="@color/card_background"
         android:textColor="@color/white"
         android:hint="@string/description_text_hint"
+        android:text="@={viewmodel.description}"
         android:minHeight="48dp"
         android:padding="@dimen/default_gap"
         android:textColorHint="@color/white"
@@ -80,6 +96,7 @@
         android:layout_marginEnd="@dimen/default_gap"
         android:background="@color/card_background"
         android:hint="@string/calificacion_text_hint"
+        android:text="@={viewmodel.qualification}"
         android:textColor="@color/white"
         android:minHeight="48dp"
         android:padding="@dimen/default_gap"
@@ -92,6 +109,7 @@
     <Button
         android:id="@+id/submit_action_button"
         android:layout_width="wrap_content"
+        android:onClick="@{()->viewmodel.createMovie()}"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/button_background"
         android:layout_marginTop="@dimen/big_gap"
@@ -100,4 +118,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calificationEditText" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</layout>

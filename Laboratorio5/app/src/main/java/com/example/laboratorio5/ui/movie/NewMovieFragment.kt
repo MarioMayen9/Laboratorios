@@ -22,36 +22,40 @@ class NewMovieFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentNewMovieBinding.inflate(inflater,container,false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setViewModel()
+        setObserver()
+    }
 
-        binding.submitActionButton.setOnClickListener {
-            createMovie()
+    private fun setViewModel(){
+        binding.viewmodel = viewModel
+    }
+
+
+    private fun setObserver() {
+        viewModel.status.observe(viewLifecycleOwner) { status ->
+            when {
+                status.equals(MovieViewModel.MOVIE_CREATED) -> {
+                    val mylist = viewModel.getMovies().reversed()
+                    Log.d("TAG APP", status)
+                    Log.d("TAG APP", mylist.toString())
+                    viewModel.clearStatus()
+                    viewModel.clearData()
+                    findNavController().popBackStack()
+                }
+                status.equals(MovieViewModel.WRONG_INFORMATION) -> {
+                    Log.d("TAG APP", status)
+                    viewModel.clearStatus()
+                }
+            }
         }
     }
-
-    private fun createMovie() {
-        val newMovie = MovieModel(
-            binding.nameEditText.text.toString(),
-            binding.categoryEditText.text.toString(),
-            binding.descriptionEditText.text.toString(),
-            binding.calificationEditText.text.toString()
-        )
-
-        viewModel.addMovies(newMovie)
-        val mylist = viewModel.getMovies().reversed()
-        Log.d("My movie list", mylist.toString())
-
-        findNavController().popBackStack()
-
-    }
-
-
 
 
 

@@ -13,7 +13,9 @@ val description2 = "Thirty   years after the events of the first film, a new bla
 val qualification2 = "8.0"
 
 
+
 var movies = mutableListOf(
     MovieModel(name, category, description, qualification),
-    MovieModel(name2, category2, description2, qualification2)
+    MovieModel(name2, category2, description2, qualification2),
+
 )
