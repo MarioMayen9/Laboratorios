@@ -1,4 +1,4 @@
-package com.example.laboratorio5.ui.movie
+package com.example.laboratorio5.ui.movie.newmovie
 
 import android.os.Bundle
 import android.util.Log
@@ -8,9 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.laboratorio5.R
-import com.example.laboratorio5.data.model.MovieModel
 import com.example.laboratorio5.databinding.FragmentNewMovieBinding
+import com.example.laboratorio5.ui.movie.viewmodel.MovieViewModel
 
 
 class NewMovieFragment : Fragment() {

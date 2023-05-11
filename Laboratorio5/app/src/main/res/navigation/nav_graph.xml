@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/billboardFragment"
-        android:name="com.example.laboratorio5.ui.movie.BillboardFragment"
+        android:name="com.example.laboratorio5.ui.movie.billboard.BillboardFragment"
         android:label="fragment_billboard"
         tools:layout="@layout/fragment_billboard" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/newMovie"
-        android:name="com.example.laboratorio5.ui.movie.NewMovieFragment"
+        android:name="com.example.laboratorio5.ui.movie.newmovie.NewMovieFragment"
         android:label="fragment_new_movie"
         tools:layout="@layout/fragment_new_movie" />
     <fragment
