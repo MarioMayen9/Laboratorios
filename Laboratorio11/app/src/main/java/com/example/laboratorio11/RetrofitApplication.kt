@@ -3,6 +3,7 @@ package com.example.laboratorio11
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
+import android.util.Log
 import com.example.laboratorio11.network.retrofit.RetrofitInstance
 import com.example.laboratorio11.repository.CredentialsRepository
 
@@ -17,7 +18,11 @@ class RetrofitApplication : Application() {
         getLoginService()
     }
 
-    fun getToken(): String = prefs.getString(USER_TOKEN, "")!!
+    fun getToken(): String {
+        val token = prefs.getString(USER_TOKEN, "")!!
+        Log.d("RetrofitApplication", "Token: $token") // Agregar este registro de log
+        return token
+    }
 
     val credentialsRepository: CredentialsRepository by lazy {
         CredentialsRepository(getAPIService())
